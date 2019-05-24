@@ -1,0 +1,33 @@
+git init 将当前目录初始化为Git仓库
+git add filename.xxx 将工作区文件加入到暂存区
+git status 查看当前状态
+git diff 比较工作区与暂存区文件的区别
+git commit -m " " 将暂存区文件提交到仓库， -m为说明
+git log 查询历史提交记录 参数--pretty=online更改显示格式
+git reset --hard HEAD^/HEAD^^/HEAD~n/commit_id 	回退到上/某个版本
+git reflog 查看历史git命令
+git checkout -- filename.xxx 放弃当前工作区的更改discard changes in working directory
+git reset HEAD filename.xxx 将暂存区的修改撤销掉
+git rm 删除版本库中的文件
+git remote add origin https://github.com/userName/gitName.git 关联远程库，origin通常用于远程库别名
+git remote add origin git@github.com:userName/gitName.git 同上，用ssh协议,速度较快
+git push -u origin master 将master分支推送到远程库，-u 参数只需要在首次推送时加上
+git remote remove origin 移除origin关联的远程库
+git branch dev 创建dev分支
+git checkout dev 切换到dev分支
+git checkout -b dev 创建并切换到dev分支
+git branch 查看分支信息（本地）
+git merge dev 将dev分支合并到当前分支上
+git branch -d dev 删除本地分支
+git push origin --delete dev 删除远程分支
+git branch -a 查看分支情况（包括远程分支）
+git log --graph --pretty=oneline --abbrev-commit 查看分支合并情况
+git stash 现场保护
+git stash apply 恢复现场但不删除stash
+git stash apply stash@{0} 恢复stash0，但不删除stash0
+git stash drop 删除stash
+git stash pop 恢复现场并删除stash
+git remote 查看远程库信息
+git remote -v 查看详细远程库信息
+
+
